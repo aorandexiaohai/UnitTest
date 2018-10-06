@@ -1,5 +1,7 @@
 #pragma once
 #include "ColorConsole.h"
+#include "xt_log_helper.h"
+
 #define UT_EXPECT_TRUE(expr) \
 { \
 auto value = bool(expr); \    

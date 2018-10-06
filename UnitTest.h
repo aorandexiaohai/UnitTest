@@ -9,7 +9,8 @@ if(!value) \
 { \
     std::cout <<CODE_LOCATION << ":";\
     std::cout << #expr " is expected to "; \
-    CConsole(GREEN)<<"true, but it is "; \
+    CConsole(GREEN)<<"true"; \
+    std::cout << ", but it is "; \
     CConsole(RED) << "false\n"; \
 } \
 }
@@ -21,7 +22,20 @@ if(value) \
 { \
     std::cout <<CODE_LOCATION << ":";\
     std::cout << #expr " is expected to "; \
-    CConsole(GREEN)<<"false, but it is "; \
+    CConsole(GREEN)<<"false"; \
+    std::cout << ", but it is "; \
     CConsole(RED) << "true\n"; \
+} \
+}
+
+#define UT_EXPECT_CURRENT(expr) \
+{ \
+auto value = bool(expr); \    
+{ \
+    std::cout <<CODE_LOCATION << ":";\
+    std::cout << #expr " is expected to "; \
+    CConsole(GREEN)<<(value?"true":"false"); \
+    std::cout << ", and it is "; \
+    CConsole(GREEN) << (value?"true\n":"false\n"); \
 } \
 }

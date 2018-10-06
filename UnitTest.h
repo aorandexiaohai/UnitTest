@@ -10,7 +10,7 @@ if(!value) \
     std::cout <<CODE_LOCATION << ":";\
     std::cout << #expr " is expected to "; \
     CConsole(GREEN)<<"true, but it is "; \
-    CConsole(RED) << "false\n" \
+    CConsole(RED) << "false\n"; \
 } \
 }
 
@@ -22,6 +22,6 @@ if(value) \
     std::cout <<CODE_LOCATION << ":";\
     std::cout << #expr " is expected to "; \
     CConsole(GREEN)<<"false, but it is "; \
-    CConsole(RED) << "true\n" \
+    CConsole(RED) << "true\n"; \
 } \
 }

@@ -55,3 +55,11 @@ auto value = bool(expr); \
     CConsole(GREEN) << (value?"true\n":"false\n"); \
 } \
 }
+
+#define UT_SHOW_VALUE(expr) \
+{ \
+    auto&& value = (expr); \
+    std::cout <<CODE_LOCATION << ":"; \
+    std::cout << #expr<<":"; \
+    CConsole(GREEN)<<value<<std::endl; \
+}

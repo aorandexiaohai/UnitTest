@@ -63,3 +63,15 @@ auto value = bool(expr); \
     std::cout << #expr<<":"; \
     CConsole(GREEN)<<value<<std::endl; \
 }
+
+#define UT_SHOW_ARR_VALUE(expr, size) \
+{ \
+    auto&& value = (expr); \
+    std::cout <<CODE_LOCATION << ":"; \
+    std::cout << #expr<<":"; \
+    for(int index=0; index<size; index++) \
+    { \
+        CConsole(GREEN)<<value[index]<<", "; \
+    } \
+    std::cout<<std::endl; \
+}

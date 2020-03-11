@@ -4,7 +4,7 @@
 
 #define UT_EXPECT_TRUE(expr) \
 { \
-auto value = bool(expr); \    
+auto value = bool(expr); \
 if(!value) \
 { \
     std::cout <<CODE_LOCATION << ":";\
@@ -25,7 +25,7 @@ else \
 
 #define UT_EXPECT_FALSE(expr) \
 { \
-auto value = bool(expr); \    
+auto value = bool(expr); \
 if(value) \
 { \
     std::cout <<CODE_LOCATION << ":";\
@@ -46,7 +46,7 @@ else \
 
 #define UT_EXPECT_CURRENT(expr) \
 { \
-auto value = bool(expr); \    
+auto value = bool(expr); \
 { \
     std::cout <<CODE_LOCATION << ":";\
     std::cout << #expr " is expected to "; \
